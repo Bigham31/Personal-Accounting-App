@@ -1,0 +1,16 @@
+F:\Projects\MyAccounting\MyAccounting.ViewModel\bin\Debug\MyAccounting.ViewModel.dll
+F:\Projects\MyAccounting\MyAccounting.ViewModel\bin\Debug\MyAccounting.ViewModel.pdb
+F:\Projects\MyAccounting\MyAccounting.ViewModel\obj\Debug\MyAccounting.ViewModel.csproj.AssemblyReference.cache
+F:\Projects\MyAccounting\MyAccounting.ViewModel\obj\Debug\Interop.Accessibility.dll
+F:\Projects\MyAccounting\MyAccounting.ViewModel\obj\Debug\MyAccounting.ViewModel.csproj.ResolveComReference.cache
+F:\Projects\MyAccounting\MyAccounting.ViewModel\obj\Debug\MyAccounting.ViewModel.csproj.CoreCompileInputs.cache
+F:\Projects\MyAccounting\MyAccounting.ViewModel\obj\Debug\MyAccounting.ViewModel.dll
+F:\Projects\MyAccounting\MyAccounting.ViewModel\obj\Debug\MyAccounting.ViewModel.pdb
+D:\Projects\MyAccounting\MyAccounting.ViewModel\bin\Debug\MyAccounting.ViewModel.dll
+D:\Projects\MyAccounting\MyAccounting.ViewModel\bin\Debug\MyAccounting.ViewModel.pdb
+D:\Projects\MyAccounting\MyAccounting.ViewModel\obj\Debug\MyAccounting.ViewModel.csproj.AssemblyReference.cache
+D:\Projects\MyAccounting\MyAccounting.ViewModel\obj\Debug\Interop.Accessibility.dll
+D:\Projects\MyAccounting\MyAccounting.ViewModel\obj\Debug\MyAccounting.ViewModel.csproj.ResolveComReference.cache
+D:\Projects\MyAccounting\MyAccounting.ViewModel\obj\Debug\MyAccounting.ViewModel.csproj.CoreCompileInputs.cache
+D:\Projects\MyAccounting\MyAccounting.ViewModel\obj\Debug\MyAccounting.ViewModel.dll
+D:\Projects\MyAccounting\MyAccounting.ViewModel\obj\Debug\MyAccounting.ViewModel.pdb

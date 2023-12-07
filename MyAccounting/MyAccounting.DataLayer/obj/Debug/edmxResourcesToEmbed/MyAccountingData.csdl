@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MyAccountingDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="MyAccountingDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Contacts" EntityType="MyAccountingDBModel.Contacts" />
+    <EntitySet Name="AccountingType" EntityType="MyAccountingDBModel.AccountingType" />
+    <EntitySet Name="Transactions" EntityType="MyAccountingDBModel.Transactions" />
+    <AssociationSet Name="FK_Transactions_AccountingType" Association="MyAccountingDBModel.FK_Transactions_AccountingType">
+      <End Role="AccountingType" EntitySet="AccountingType" />
+      <End Role="Transactions" EntitySet="Transactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transactions_Contacts" Association="MyAccountingDBModel.FK_Transactions_Contacts">
+      <End Role="Contacts" EntitySet="Contacts" />
+      <End Role="Transactions" EntitySet="Transactions" />
+    </AssociationSet>
+    <EntitySet Name="Login" EntityType="MyAccountingDBModel.Login" />
+  </EntityContainer>
+  <EntityType Name="Contacts">
+    <Key>
+      <PropertyRef Name="ContactID" />
+    </Key>
+    <Property Name="ContactID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="700" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Transactions" Relationship="MyAccountingDBModel.FK_Transactions_Contacts" FromRole="Contacts" ToRole="Transactions" />
+  </EntityType>
+  <EntityType Name="AccountingType">
+    <Key>
+      <PropertyRef Name="TypeID" />
+    </Key>
+    <Property Name="TypeID" Type="Int32" Nullable="false" />
+    <Property Name="TypeTitle" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Transactions" Relationship="MyAccountingDBModel.FK_Transactions_AccountingType" FromRole="AccountingType" ToRole="Transactions" />
+  </EntityType>
+  <EntityType Name="Transactions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContactID" Type="Int32" Nullable="false" />
+    <Property Name="TypeID" Type="Int32" Nullable="false" />
+    <Property Name="Amount" Type="Int32" Nullable="false" />
+    <Property Name="Discription" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="AccountingType" Relationship="MyAccountingDBModel.FK_Transactions_AccountingType" FromRole="Transactions" ToRole="AccountingType" />
+    <NavigationProperty Name="Contacts" Relationship="MyAccountingDBModel.FK_Transactions_Contacts" FromRole="Transactions" ToRole="Contacts" />
+  </EntityType>
+  <Association Name="FK_Transactions_AccountingType">
+    <End Type="MyAccountingDBModel.AccountingType" Role="AccountingType" Multiplicity="1" />
+    <End Type="MyAccountingDBModel.Transactions" Role="Transactions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccountingType">
+        <PropertyRef Name="TypeID" />
+      </Principal>
+      <Dependent Role="Transactions">
+        <PropertyRef Name="TypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transactions_Contacts">
+    <End Type="MyAccountingDBModel.Contacts" Role="Contacts" Multiplicity="1" />
+    <End Type="MyAccountingDBModel.Transactions" Role="Transactions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contacts">
+        <PropertyRef Name="ContactID" />
+      </Principal>
+      <Dependent Role="Transactions">
+        <PropertyRef Name="ContactID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

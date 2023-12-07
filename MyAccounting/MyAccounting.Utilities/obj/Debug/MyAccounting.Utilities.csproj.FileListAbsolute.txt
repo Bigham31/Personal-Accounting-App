@@ -1,0 +1,12 @@
+F:\Projects\MyAccounting\MyAccounting.Utilities\bin\Debug\MyAccounting.Utilities.dll
+F:\Projects\MyAccounting\MyAccounting.Utilities\bin\Debug\MyAccounting.Utilities.pdb
+F:\Projects\MyAccounting\MyAccounting.Utilities\obj\Debug\MyAccounting.Utilities.csproj.AssemblyReference.cache
+F:\Projects\MyAccounting\MyAccounting.Utilities\obj\Debug\MyAccounting.Utilities.csproj.CoreCompileInputs.cache
+F:\Projects\MyAccounting\MyAccounting.Utilities\obj\Debug\MyAccounting.Utilities.dll
+F:\Projects\MyAccounting\MyAccounting.Utilities\obj\Debug\MyAccounting.Utilities.pdb
+D:\Projects\MyAccounting\MyAccounting.Utilities\bin\Debug\MyAccounting.Utilities.dll
+D:\Projects\MyAccounting\MyAccounting.Utilities\bin\Debug\MyAccounting.Utilities.pdb
+D:\Projects\MyAccounting\MyAccounting.Utilities\obj\Debug\MyAccounting.Utilities.csproj.AssemblyReference.cache
+D:\Projects\MyAccounting\MyAccounting.Utilities\obj\Debug\MyAccounting.Utilities.csproj.CoreCompileInputs.cache
+D:\Projects\MyAccounting\MyAccounting.Utilities\obj\Debug\MyAccounting.Utilities.dll
+D:\Projects\MyAccounting\MyAccounting.Utilities\obj\Debug\MyAccounting.Utilities.pdb
